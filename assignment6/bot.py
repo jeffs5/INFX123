@@ -1,13 +1,10 @@
 from random import choice, randint
-from threading import Thread
 from network import Handler, poll
 from pygame import Rect
-from pygame.event import get as get_pygame_events
 from pygame.time import Clock
 from pygame.display import set_mode, update as update_pygame_display
 from pygame.draw import rect as draw_rect
 import math
-import sys
 
 
 ################### MODEL ##################################
