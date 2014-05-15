@@ -2,3 +2,10 @@
 .project
 .pydevproject
 .settings
+assignment6/client.py
+
+assignment6/common.py
+
+assignment6/network.py
+
+assignment6/server.py
