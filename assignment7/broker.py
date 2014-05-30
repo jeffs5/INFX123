@@ -43,7 +43,7 @@ class MyHandler(Handler):
                     subs[temp_word].append(self)
                     send_to.append(self)
 
-            #removes tag
+            #removes tag for person who sent it
             for s in temp:
                 if '-' in s:
                     temp_word = s.replace('-','', 1)
@@ -52,7 +52,7 @@ class MyHandler(Handler):
                             if handler == self:
                                 subs[temp_word].remove(self)
 
-            #sends to specific users based on tag
+            #sends to users subscribed to tag
             for s in temp:
                 if '#' in s:
                     temp_word = s.replace('#','', 1)
@@ -61,6 +61,7 @@ class MyHandler(Handler):
                             if handler not in send_to:
                                 send_to.append(handler)
 
+            #private message to person
             for s in temp:
                 if '@' in s:
                     temp_word = s.replace('@','',1)
